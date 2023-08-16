@@ -1,11 +1,14 @@
 ---
 hero:
-  title: Chakra-Theme
+  # title: Chakra-Theme
+  icon: https://api.iconify.design/icon-park:dark-mode.svg
   description: Chakra-UI theme for dumi2
+  subDescription: test sub description
   actions:
     - text: Get Started
       link: /guide
     - text: Advanced
+      icon: gitLab
       link: /guide/advance
     - text: GitHub
       icon: github

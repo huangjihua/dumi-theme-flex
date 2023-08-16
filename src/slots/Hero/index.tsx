@@ -7,12 +7,12 @@ import {
   HStack,
   Button,
   Image,
-  Icon
+  Icon,
+  Link
 } from '@chakra-ui/react';
 import { VscGithub as Github } from 'react-icons/vsc';
-import { SiDiscord as Discord } from 'react-icons/si';
+import { SiDiscord as Discord, SiGitlab as GitLab } from 'react-icons/si';
 import HeroTitle from '../HeroTitle';
-import { Link } from 'dumi';
 
 import useHero from '../../hooks/useHero';
 
@@ -28,6 +28,7 @@ export type HeroConfig = {
 
 const icons = {
   github: <Icon as={Github} />,
+  gitLab: <Icon as={GitLab} />,
   discord: <Icon as={Discord} />
 };
 
@@ -38,7 +39,7 @@ const ActionLeftIcon: FC<{ icon: string }> = ({ icon }) =>
 const Hero: FC = () => {
   const { config, ...hero } = useHero();
 
-  const { actions, description } = hero ?? {};
+  const { actions, description, subDescription, icon } = hero ?? {};
 
   const showActionButtons = useMemo<boolean>(() => {
     return !!actions?.length;
@@ -52,18 +53,30 @@ const Hero: FC = () => {
       maxW="container.xxl"
       p={{ base: 10, md: 16 }}
     >
+      {icon && (
+        <Center>
+          <Image src={icon} alt="pic" />
+        </Center>
+      )}
       <HeroTitle />
       <Center>
         <Text
           fontSize="2xl"
           textAlign="center"
           fontWeight="semibold"
-          p={{ base: 4, md: 8 }}
+          p={{ base: 4, md: 4 }}
           pt={4}
         >
           {description}
         </Text>
       </Center>
+      {subDescription && (
+        <Center>
+          <Text fontSize="xl" textAlign="center" pb="4">
+            {subDescription}
+          </Text>
+        </Center>
+      )}
       {showActionButtons && (
         <Center>
           <HStack wrap="wrap">
@@ -87,7 +100,7 @@ const Hero: FC = () => {
                     {ActionButton}
                   </a>
                 ) : (
-                  <Link key={index} to={link}>
+                  <Link key={index} href={link}>
                     {ActionButton}
                   </Link>
                 );

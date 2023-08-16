@@ -33,11 +33,7 @@ import Hero from 'dumi/theme/slots/Hero';
 import NavBar from 'dumi/theme/slots/Navbar';
 import SideBar from 'dumi/theme/slots/Sidebar';
 import Toc from 'dumi/theme/slots/Toc';
-
 import { isUndefined } from '../../factory/tools';
-
-import heroBackgroundDark from '../../media/hero-background-dark.jpg';
-import heroBackground from '../../media/hero-background.jpg';
 
 /**
  * @description cover default struct of dumi layout
@@ -56,7 +52,7 @@ const DocLayout: FC = () => {
     'transparent',
     'whiteAlpha.400'
   );
-  const backgroundImage = useColorModeValue(heroBackground, heroBackgroundDark);
+  const backgroundImage = useColorModeValue(null, null);
 
   const { isOpen, onOpen, onClose } = useDisclosure();
   const navDisclosure = useDisclosure();

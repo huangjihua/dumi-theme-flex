@@ -8,7 +8,7 @@ const HeroTitle: FC = () => {
   const { title, config: { showVersionBadge } = {} } = useHero();
   const { version = 'unknown' } = usePackage();
 
-  return (
+  return title ? (
     <Center>
       <HStack
         position="relative"
@@ -41,7 +41,7 @@ const HeroTitle: FC = () => {
         ) : null}
       </HStack>
     </Center>
-  );
+  ) : null;
 };
 
 export default HeroTitle;

@@ -9,9 +9,10 @@ import {
   SimpleGrid,
   Stack,
   Tag,
-  Text
+  Text,
+  Link
 } from '@chakra-ui/react';
-import { Link } from 'dumi';
+
 import useFeatures from '../../hooks/useFeatures';
 
 import { isOutLink } from '../../factory/tools';
@@ -28,7 +29,7 @@ const Title: FC<PropsWithChildren<{ link?: string }>> = ({
         {children}
       </a>
     ) : (
-      <Link to={link}>{children}</Link>
+      <Link href={link}>{children}</Link>
     );
   }
 

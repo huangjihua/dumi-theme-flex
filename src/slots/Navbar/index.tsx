@@ -1,4 +1,4 @@
-import { Link, useLocation, useNavData } from 'dumi';
+import { useLocation, useNavData } from 'dumi';
 import React, { type FC } from 'react';
 
 import {
@@ -12,7 +12,8 @@ import {
   Hide,
   HStack,
   Show,
-  useColorModeValue
+  useColorModeValue,
+  Link
 } from '@chakra-ui/react';
 
 import { isOutLink } from '../../factory/tools';
@@ -54,7 +55,7 @@ const Nav = () => {
         }
 
         return (
-          <Link key={link} to={link}>
+          <Link key={link} href={link}>
             {actionButton}
           </Link>
         );
