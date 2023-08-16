@@ -19,18 +19,18 @@
 </p>
 <br />
 <div align="center">
-  <p>基于 Chakra-UI 的 dumi2 主题<p>
+  <p>基于 Chakra-UI 的 dumi3 主题<p>
 </div>
 
 ## Usage
 
 ```bash
 # npm
-$ npm i dumi-theme-flex -D
+$ npm i dumi-theme-moible-flex -D
 # yarn
-$ yarn add dumi-theme-flex -D
+$ yarn add dumi-theme-moible-flex -D
 # pnpm
-$ pnpm add dumi-theme-flex -D
+$ pnpm add dumi-theme-moible-flex -D
 ```
 
 ## Configure
@@ -39,7 +39,7 @@ $ pnpm add dumi-theme-flex -D
 
 ```ts
 import { defineConfig } from 'dumi';
-import { defineThemeConfig } from 'dumi-theme-flex';
+import { defineThemeConfig } from 'dumi-theme-moible-flex';
 
 export defineConfig({
   themeConfig: {

@@ -19,18 +19,18 @@
 </p>
 <br />
 <div align="center">
-  <p>Chakra theme for dumi2<p>
+  <p>Chakra theme for dumi3<p>
 </div>
 
 ## Usage
 
 ```bash
 # npm
-$ npm i dumi-theme-flex -D
+$ npm i dumi-theme-moible-flex -D
 # yarn
-$ yarn add dumi-theme-flex -D
+$ yarn add dumi-theme-moible-flex -D
 # pnpm
-$ pnpm add dumi-theme-flex -D
+$ pnpm add dumi-theme-moible-flex -D
 ```
 
 ## Configure
@@ -39,7 +39,7 @@ configure it in dumi config file `.dumirc.ts`:
 
 ```ts
 import { defineConfig } from 'dumi';
-import { defineThemeConfig } from 'dumi-theme-flex';
+import { defineThemeConfig } from 'dumi-theme-moible-flex';
 
 export defineConfig({
   themeConfig: {
