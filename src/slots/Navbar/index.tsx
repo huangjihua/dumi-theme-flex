@@ -3,7 +3,6 @@ import React, { type FC } from 'react';
 
 import {
   Button,
-  chakra,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
@@ -22,8 +21,6 @@ export type NavBarConfig = {
   isOpen: boolean;
   onClose: () => void;
 };
-
-export const ChakraLink = chakra(Link) as typeof Link;
 
 const Nav = () => {
   const { pathname } = useLocation();
